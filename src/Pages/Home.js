@@ -1,21 +1,21 @@
 import React from 'react'
 import TopicBox from '../components/TopicBox'
 
+import { Link, useNavigate } from 'react-router-dom'
+
+
 
 export default function Home() {
+  const Navigate = useNavigate();
   return (
     <div>
         <h1>Home Page</h1>
-      <TopicBox food="pizza">
-        <span>This is the description</span>
-      </TopicBox>
-      <TopicBox food="cake">
-        <button>This is ia button</button>
-      </TopicBox>
-      <TopicBox food="burger">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, hic!</p>
-      </TopicBox>
-      
+        <Link to='/About'>Go to About Page</Link><br/>
+        <Link to='/Contact'>Go to Contact Page</Link><br/>
+        <button onClick={()=> Navigate('/About')}>
+            About Page
+        </button>
+
     </div>
   )
 }
