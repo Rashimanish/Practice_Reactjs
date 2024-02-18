@@ -6,11 +6,20 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+
+function buttonClick(){
+  console.log("Button is clicked")
+}
 function App() {
 
   return (
    <div>
-      <Home/>
+
+      <h1> React Event Handling</h1> <br/><br/>
+
+      <button onClick={buttonClick}>
+        Click
+      </button>
     </div>
  
   );
